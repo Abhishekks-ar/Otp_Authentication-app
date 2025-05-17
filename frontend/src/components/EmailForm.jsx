@@ -7,9 +7,9 @@ const EmailForm = ({ onEmailSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+// http://localhost:3000/form
     axios
-      .post("http://localhost:3000/form", { email })
+      .post("https://otp-authentication-app.onrender.com/forum", { email })
       .then((res) => {
         alert(res.data); 
         onEmailSubmit(email); // notify parent to switch to OTP form
