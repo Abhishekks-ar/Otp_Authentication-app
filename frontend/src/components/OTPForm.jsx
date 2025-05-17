@@ -11,7 +11,7 @@ const OTPForm = ({ email }) => {
     e.preventDefault();
 
     axios
-      .post("https://otp-authentication-app.onrender.com/verify", { email, otp })
+      .post("http://localhost:3000/verify", { email, otp })
       .then((res) => {
         alert(res.data); // e.g., "OTP verified successfully"
         navigate("/welcome"); 
